@@ -15,3 +15,16 @@ ave_data_lenght = data_length / len(data)
 
 print('檔案讀取完成, 總共有', len(data), '筆資料')
 print('平均每筆資料長度:', ave_data_lenght)
+
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print('一共有', len(new), '資料長度小於100')
+print(new[0])
+
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+print('一共有', len(good), '筆提到Good')
